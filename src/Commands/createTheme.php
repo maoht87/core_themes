@@ -1,6 +1,6 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace Omt\CoreTheme\Commands;
 
-use Igaster\LaravelTheme\Facades\Theme;
+use Omt\CoreTheme\Facades\Theme;
 
 class createTheme extends baseCommand
 {
@@ -71,7 +71,7 @@ class createTheme extends baseCommand
 
         if ($this->confirm('Create Theme?', true)) {
 
-            $themeJson = new \Igaster\LaravelTheme\themeManifest(array_merge([
+            $themeJson = new \Omt\CoreTheme\themeManifest(array_merge([
                 "name" => $themeName,
                 "extends" => $parentTheme,
                 "asset-path" => $assetPath,

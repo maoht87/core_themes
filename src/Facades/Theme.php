@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Facades;
+<?php namespace Omt\CoreTheme\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,6 +11,6 @@ class Theme extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'igaster.themes';
+        return 'omt.themes';
     }
 }

@@ -1,7 +1,7 @@
-<?php namespace Igaster\LaravelTheme\Middleware;
+<?php namespace Omt\CoreTheme\Middleware;
 
 use Closure;
-use Igaster\LaravelTheme\Facades\Theme;
+use Omt\CoreTheme\Facades\Theme;
 
 class setTheme
 {

@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Exceptions;
+<?php namespace Omt\CoreTheme\Exceptions;
 /**
  * Define a custom exception class
  */

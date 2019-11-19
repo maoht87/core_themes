@@ -14,12 +14,12 @@ class Theme
     /** @var Theme  */
     public $parent;
 
-    /** @var \Igaster\LaravelTheme\Themes */
+    /** @var \Omt\CoreTheme\Themes */
     private $themes;
 
     public function __construct($themeName, $assetPath = null, $viewsPath = null, Theme $parent = null)
     {
-        $this->themes = resolve('igaster.themes');
+        $this->themes = resolve('omt.themes');
 
         $this->name = $themeName;
         $this->assetPath = $assetPath === null ? $themeName : $assetPath;
@@ -138,7 +138,7 @@ class Theme
         File::makeDirectory($viewsPath);
         File::makeDirectory($assetPath);
 
-        $themeJson = new \Igaster\LaravelTheme\themeManifest(array_merge($this->settings, [
+        $themeJson = new \Omt\CoreTheme\themeManifest(array_merge($this->settings, [
             'name' => $this->name,
             'extends' => $this->parent ? $this->parent->name : null,
             'asset-path' => $this->assetPath,

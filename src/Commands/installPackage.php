@@ -1,7 +1,7 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace Omt\CoreTheme\Commands;
 
-use Igaster\LaravelTheme\Facades\Theme;
-use Igaster\LaravelTheme\themeManifest;
+use Omt\CoreTheme\Facades\Theme;
+use Omt\CoreTheme\themeManifest;
 
 class installPackage extends baseCommand
 {

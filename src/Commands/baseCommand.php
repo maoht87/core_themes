@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace Omt\CoreTheme\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

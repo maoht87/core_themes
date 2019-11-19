@@ -1,6 +1,6 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace Omt\CoreTheme\Commands;
 
-use Igaster\LaravelTheme\Facades\Theme;
+use Omt\CoreTheme\Facades\Theme;
 
 class refreshCache extends baseCommand
 {

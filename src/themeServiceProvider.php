@@ -1,11 +1,11 @@
 <?php namespace Igaster\LaravelTheme;
 
-use Igaster\LaravelTheme\Commands\createPackage;
-use Igaster\LaravelTheme\Commands\createTheme;
-use Igaster\LaravelTheme\Commands\installPackage;
-use Igaster\LaravelTheme\Commands\listThemes;
-use Igaster\LaravelTheme\Commands\refreshCache;
-use Igaster\LaravelTheme\Commands\removeTheme;
+use Omt\CoreTheme\Commands\createPackage;
+use Omt\CoreTheme\Commands\createTheme;
+use Omt\CoreTheme\Commands\installPackage;
+use Omt\CoreTheme\Commands\listThemes;
+use Omt\CoreTheme\Commands\refreshCache;
+use Omt\CoreTheme\Commands\removeTheme;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
@@ -20,7 +20,7 @@ class themeServiceProvider extends ServiceProvider
         | Bind in IOC
         |--------------------------------------------------------------------------*/
 
-        $this->app->singleton('igaster.themes', function () {
+        $this->app->singleton('omt.themes', function () {
             return new Themes();
         });
 
@@ -29,7 +29,7 @@ class themeServiceProvider extends ServiceProvider
         |--------------------------------------------------------------------------*/
 
         $this->app->singleton('view.finder', function ($app) {
-            return new \Igaster\LaravelTheme\themeViewFinder(
+            return new \Omt\CoreTheme\themeViewFinder(
                 $app['files'],
                 $app['config']['view.paths'],
                 null
@@ -51,7 +51,7 @@ class themeServiceProvider extends ServiceProvider
         | Initialize Themes
         |--------------------------------------------------------------------------*/
 
-        $themes = $this->app->make('igaster.themes');
+        $themes = $this->app->make('omt.themes');
         $themes->scanThemes();
 
         /*--------------------------------------------------------------------------

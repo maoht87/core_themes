@@ -1,7 +1,7 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace Omt\CoreTheme\Commands;
 
 use Illuminate\Console\Command;
-use Igaster\LaravelTheme\Facades\Theme;
+use Omt\CoreTheme\Facades\Theme;
 
 class createPackage extends baseCommand
 {
@@ -73,7 +73,7 @@ class createPackage extends baseCommand
         system("cp -r $assetPath {$this->tempPath}/asset");
 
         // Add viewsPath into theme.json file
-        $themeJson = new \Igaster\LaravelTheme\themeManifest();
+        $themeJson = new \Omt\CoreTheme\themeManifest();
 
         $themeJson->loadFromFile("{$this->tempPath}/views/theme.json");
 

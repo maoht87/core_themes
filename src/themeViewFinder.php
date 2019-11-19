@@ -1,6 +1,6 @@
 <?php namespace Igaster\LaravelTheme;
 
-use Igaster\LaravelTheme\Facades\Theme;
+use Omt\CoreTheme\Facades\Theme;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
 use Illuminate\View\FileViewFinder;
@@ -9,7 +9,7 @@ class themeViewFinder extends FileViewFinder
 {
     public function __construct(Filesystem $files, array $paths, array $extensions = null)
     {
-        $this->themeEngine = \App::make('igaster.themes');
+        $this->themeEngine = \App::make('omt.themes');
         parent::__construct($files, $paths, $extensions);
     }
 

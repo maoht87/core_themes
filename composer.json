@@ -1,13 +1,13 @@
 {
-    "name": "igaster/laravel-theme",
+    "name": "omt/core-theme",
     "description": "Laravel 5 Themes: Asset & Views folder per theme. Theme inheritance. Blade integration and more...",
     "keywords": ["themes", "views", "assets", "blade", "laravel", "package"],
     "license": "MIT",
-    "homepage": "https://github.com/Igaster/laravel-theme.git",
+    "homepage": "https://github.com/maoht87/core_themes.git",
     "authors": [
         {
-            "name": "Giannis Gasteratos",
-            "email": "igasteratos@gmail.com"
+            "name": "Mao Dao",
+            "email": "maodk61@gmail.com"
         }
     ],	
     "require": {
@@ -18,17 +18,17 @@
     },
     "autoload": {
         "psr-4" : {
-            "Igaster\\LaravelTheme\\"        : "src/",
-            "Igaster\\LaravelTheme\\Tests\\" : "tests/"            
+            "Omt\\CoreTheme\\"        : "src/",
+            "Omt\\CoreTheme\\Tests\\" : "tests/"            
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Igaster\\LaravelTheme\\themeServiceProvider"
+                "Omt\\CoreTheme\\themeServiceProvider"
             ],
             "aliases": {
-                "Theme": "Igaster\\LaravelTheme\\Facades\\Theme"
+                "Theme": "Omt\\CoreTheme\\Facades\\Theme"
             }
         }
     },
